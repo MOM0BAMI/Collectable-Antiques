@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collectable Antiques - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('im') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay to ensure text readability */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: #d4af37;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b68b2d;
+        }
+
+        /* Featured Section */
+        .featured {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: white;
+        }
+
+        .featured h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .featured-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            flex: 1;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .item img:hover {
+            transform: scale(1.05);
+        }
+
+        .item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .item p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="shop.html"><i class="fas fa-store"></i> Shop</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="checkout.html" class="icon-link">
+                <i class="fas fa-shopping-basket"></i>
+                <span>Checkout</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Background Image -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Timeless Masterpieces</h1>
+                <p>Explore a curated collection of rare antiques, each telling a story of elegance and history.</p>
+                <a href="shop.html" class="btn"><i class="fas fa-shopping-cart"></i> Start Shopping</a>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured">
+            <h2>Featured Collections</h2>
+            <div class="featured-items">
+                <article class="item">
+                    <img src="images/paintings/Hunter with Horse/1.jpeg" alt="Loughridge Gray Painting">
+                    <h3>Loughridge Gray Painting</h3>
+                    <p>An exquisite oil painting capturing a classic English hunting scene.</p>
+                    <a href="painting.html" class="btn">Explore</a>
+                </article>
+                <article class="item">
+                    <img src="images/piano/Front View.jpg" alt="W. Hoffmann 173 Baby Grand Piano">
+                    <h3>W. Hoffmann 173 Baby Grand Piano</h3>
+                    <p>A luxurious piano with remarkable sound quality and timeless elegance.</p>
+                    <a href="piano.html" class="btn">Explore</a>
+                </article>
+                <article class="item">
+                    <img src="images/vases/1.jpeg" alt="Japanese Satsuma Miniature Vase">
+                    <h3>Japanese Satsuma Miniature Vase</h3>
+                    <p>A pair of elegant vases from the early 20th century with intricate gilding.</p>
+                    <a href="vase.html" class="btn">Explore</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Collectable Antiques. All rights reserved.</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+123456789">123-456-789</a> | <i class="fas fa-envelope"></i> <a href="mailto:info@collectableantiques.com">info@collectableantiques.com</a></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1em;
+}
+
+nav a:hover {
+    color: #e2b04f;
+    text-decoration: underline;
+}
+
+.icon-link i {
+    margin-right: 8px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.icon-link:hover i {
+    color: #e2b04f;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 1em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: #e2b04f;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #d1a349;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.product-list article {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1em;
+    transition: box-shadow 0.3s;
+}
+
+.product-list article:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-list img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.5em;
+}
+
+/* Checkout Form */
+.checkout {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.checkout form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkout button {
+    background-color: #e2b04f;
+    color: white;
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout button:hover {
+    background-color: #d1a349;
+}
+
+/* Styles for the product page */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.product-gallery {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.main-image {
+    flex: 2;
+    margin-right: 10px;
+    border: 2px solid #e2b04f;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    height: 300px; /* Adjusted height */
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.05);
+}
+
+.thumbnails-container {
+    flex: 1;
+    position: relative;
+    width: 150px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    overflow: hidden;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    gap: 5px;
+    padding: 5px;
+    height: 100%;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 80px; /* Adjusted height */
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    scroll-snap-align: start;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    border: 2px solid #e2b04f;
+}
+
+.arrow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.up {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow.down {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-info {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #e2b04f;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.product-info .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-info .price {
+    font-size: 1.5rem;
+    color: #e2b04f;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.product-info .description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.product-info .btn {
+    display: inline-block;
+    background: #e2b04f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.product-info .btn:hover {
+    background: #d1a145;
+}
+
+/* Contact Page */
+.contact {
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: #e2b04f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #d1a145;
+}
+
+/* About Us Page */
+.about {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Shop Page */
+.shop {
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.shop h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.shop p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 30%;
+    background: #fff;
+    border: 2px solid #e2b04f;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    color: #e2b04f;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.product-card .btn {
+    display: inline-block;
+    background: #e2b04f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background: #d1a145;
+}
+
+/* Hero section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: #e2b04f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #d1a145;
+}
+
+/* Featured Section */
+.featured {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.featured-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    overflow: hidden; /* Ensures any overflow from images is hidden */
+    border-radius: 10px; /* Optional: Rounded corners for a smoother look */
+    border: 2px solid #ccc; /* Optional: Add a border around the item */
+    width: 100%; /* Ensures the item stretches to fit its container */
+    height: auto; /* Allows the height to adjust to the content inside */
+}
+
+
+.item img {
+    width: 100%;
+    height: 250px; /* Adjust the height as per your design needs */
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+    border-radius: 10px; /* Optional: Rounds the corners of the image */
+    border: 2px solid #ccc; /* Optional: Border around the image itself */
+}
+
+
+.item h3 {
+    margin: 10px 0;
+}
+
+.item p {
+    color: #666;
+}
+
+.item .btn {
+    display: inline-block;
+    background: #e2b04f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.item .btn:hover {
+    background: #d1a145;
+}
